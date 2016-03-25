@@ -27,7 +27,7 @@ class CardsViewController: UIViewController {
     }
     
 
-    @IBAction func onPanGesture(sender: UIPanGestureRecognizer) {
+    /*@IBAction func onPanGesture(sender: UIPanGestureRecognizer) {
         let point = sender.locationInView(self.view)
         var initial = avatar.center
         if sender.state == UIGestureRecognizerState.Began{
@@ -39,7 +39,7 @@ class CardsViewController: UIViewController {
         }else{
             
         }
-    }
+    }*/
 
 
 }

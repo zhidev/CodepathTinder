@@ -16,12 +16,21 @@
             <rect key="frame" x="0.0" y="0.0" width="304" height="304"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6eL-Dx-6WE">
-                    <rect key="frame" x="0.0" y="0.0" width="304" height="304"/>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6eL-Dx-6WE">
+                    <rect key="frame" x="52" y="52" width="200" height="200"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="yHo-vT-rZc" appends="YES" id="lRR-IN-t2W"/>
+                    </connections>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="yHo-vT-rZc">
+            <connections>
+                <action selector="onPanGesture:" destination="-1" id="liw-5y-YFl"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
 </document>

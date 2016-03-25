@@ -36,6 +36,23 @@ class CaptionalImageView: UIView {
         // custom initialization logic
         //contentView.
     }
+    
+    @IBAction func onPanGesture(sender: UIPanGestureRecognizer) {        
+        let point = sender.locationInView(contentView)
+        var initial = avatar.center
+        if sender.state == UIGestureRecognizerState.Began{
+            initial = avatar.center
+        }else if sender.state == UIGestureRecognizerState.Changed{
+            UIView.animateWithDuration(1, animations: { () -> Void in
+                self.avatar.center = CGPoint(x:point.x , y: initial.y)
+            })
+        }else{
+            
+        }
+    }
+    
+    
+    
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
