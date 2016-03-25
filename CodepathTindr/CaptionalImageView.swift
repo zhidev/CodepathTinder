@@ -28,7 +28,7 @@ class CaptionalImageView: UIView {
     
     func initSubviews() {
         // standard initialization logic
-        let nib = UINib(nibName: "CaptionableImageView", bundle: nil)
+        let nib = UINib(nibName: "CaptionalImageView", bundle: nil)
         nib.instantiateWithOwner(self, options: nil)
         contentView.frame = bounds
         addSubview(contentView)

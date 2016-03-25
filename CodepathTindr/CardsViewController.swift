@@ -11,12 +11,13 @@ import UIKit
 class CardsViewController: UIViewController {
 
     
+    @IBOutlet var avatar: CaptionalImageView!
     @IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        avatar.avatar.image = UIImage(named: "ryan")
         // Do any additional setup after loading the view.
     }
 
@@ -27,7 +28,7 @@ class CardsViewController: UIViewController {
     
 
     @IBAction func onPanGesture(sender: UIPanGestureRecognizer) {
-        /*let point = sender.locationInView(self.view)
+        let point = sender.locationInView(self.view)
         var initial = avatar.center
         if sender.state == UIGestureRecognizerState.Began{
             initial = avatar.center
@@ -37,7 +38,7 @@ class CardsViewController: UIViewController {
             })
         }else{
             
-        }*/
+        }
     }
 
 
