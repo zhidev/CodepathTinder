@@ -24,7 +24,7 @@
                             <view contentMode="scaleToFill" id="nbC-ge-1LG" customClass="CaptionalImageView" customModule="CodepathTindr" customModuleProvider="target">
                                 <rect key="frame" x="8" y="72" width="304" height="304"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                             </view>
                         </subviews>

@@ -18,6 +18,7 @@ class CardsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         avatar.avatar.image = UIImage(named: "ryan")
+        avatar.setOriginalCenter()
         // Do any additional setup after loading the view.
     }
 
