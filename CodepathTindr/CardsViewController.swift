@@ -19,6 +19,9 @@ class CardsViewController: UIViewController {
         super.viewDidLoad()
         avatar.avatar.image = UIImage(named: "ryan")
         avatar.setOriginalCenter()
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "presentProfile:")
+        avatar.addGestureRecognizer(tapGestureRecognizer)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -28,19 +31,10 @@ class CardsViewController: UIViewController {
     }
     
 
-    /*@IBAction func onPanGesture(sender: UIPanGestureRecognizer) {
-        let point = sender.locationInView(self.view)
-        var initial = avatar.center
-        if sender.state == UIGestureRecognizerState.Began{
-            initial = avatar.center
-        }else if sender.state == UIGestureRecognizerState.Changed{
-            UIView.animateWithDuration(1, animations: { () -> Void in
-                self.avatar.center = CGPoint(x:point.x , y: initial.y)
-            })
-        }else{
-            
-        }
-    }*/
+    func presentProfile(tapGesture: UITapGestureRecognizer){
+        let vc = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
 
 
 }

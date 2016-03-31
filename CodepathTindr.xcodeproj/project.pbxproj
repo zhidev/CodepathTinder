@@ -14,6 +14,8 @@
 		916AEEC01CA4DB0300884225 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916AEEBF1CA4DB0300884225 /* CardsViewController.swift */; };
 		916AEEC41CA4DFE800884225 /* CaptionalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916AEEC31CA4DFE800884225 /* CaptionalImageView.swift */; };
 		916AEEC81CA4E0A200884225 /* CaptionalImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 916AEEC71CA4E0A200884225 /* CaptionalImageView.xib */; };
+		91F5A5381CAD76130084CF68 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F5A5361CAD76130084CF68 /* ProfileViewController.swift */; };
+		91F5A5391CAD76130084CF68 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F5A5371CAD76130084CF68 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		916AEEBF1CA4DB0300884225 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		916AEEC31CA4DFE800884225 /* CaptionalImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptionalImageView.swift; sourceTree = "<group>"; };
 		916AEEC71CA4E0A200884225 /* CaptionalImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaptionalImageView.xib; sourceTree = "<group>"; };
+		91F5A5361CAD76130084CF68 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		91F5A5371CAD76130084CF68 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,42 @@
 		916AEEAC1CA4DA8700884225 /* CodepathTindr */ = {
 			isa = PBXGroup;
 			children = (
+				91F5A5341CAD71370084CF68 /* MainViewController */,
+				91F5A5331CAD711F0084CF68 /* AvatarView */,
+				91F5A5321CAD71170084CF68 /* ProfileViewController */,
 				916AEEAD1CA4DA8700884225 /* AppDelegate.swift */,
 				916AEEB11CA4DA8700884225 /* Main.storyboard */,
-				916AEEC31CA4DFE800884225 /* CaptionalImageView.swift */,
 				916AEEB41CA4DA8700884225 /* Assets.xcassets */,
 				916AEEB61CA4DA8700884225 /* LaunchScreen.storyboard */,
 				916AEEB91CA4DA8700884225 /* Info.plist */,
-				916AEEBF1CA4DB0300884225 /* CardsViewController.swift */,
-				916AEEC71CA4E0A200884225 /* CaptionalImageView.xib */,
 			);
 			path = CodepathTindr;
+			sourceTree = "<group>";
+		};
+		91F5A5321CAD71170084CF68 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				91F5A5361CAD76130084CF68 /* ProfileViewController.swift */,
+				91F5A5371CAD76130084CF68 /* ProfileViewController.xib */,
+			);
+			name = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		91F5A5331CAD711F0084CF68 /* AvatarView */ = {
+			isa = PBXGroup;
+			children = (
+				916AEEC31CA4DFE800884225 /* CaptionalImageView.swift */,
+				916AEEC71CA4E0A200884225 /* CaptionalImageView.xib */,
+			);
+			name = AvatarView;
+			sourceTree = "<group>";
+		};
+		91F5A5341CAD71370084CF68 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				916AEEBF1CA4DB0300884225 /* CardsViewController.swift */,
+			);
+			name = MainViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +162,7 @@
 				916AEEC81CA4E0A200884225 /* CaptionalImageView.xib in Resources */,
 				916AEEB81CA4DA8700884225 /* LaunchScreen.storyboard in Resources */,
 				916AEEB51CA4DA8700884225 /* Assets.xcassets in Resources */,
+				91F5A5391CAD76130084CF68 /* ProfileViewController.xib in Resources */,
 				916AEEB31CA4DA8700884225 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +176,7 @@
 			files = (
 				916AEEC41CA4DFE800884225 /* CaptionalImageView.swift in Sources */,
 				916AEEC01CA4DB0300884225 /* CardsViewController.swift in Sources */,
+				91F5A5381CAD76130084CF68 /* ProfileViewController.swift in Sources */,
 				916AEEAE1CA4DA8700884225 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +327,7 @@
 				916AEEBE1CA4DA8700884225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

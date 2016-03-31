@@ -44,12 +44,18 @@ class CaptionalImageView: UIView {
         var initial = avatar.center
         var velocity = sender.velocityInView(contentView)
         
+        let clockwiseRotation: CGFloat = 0.34906585
+        let counterClockwiseRotation: CGFloat = -0.34906585
+
+        
         //Block for milestone 5 cause it was getting repetative
         let block = {() -> Void in
             self.avatar.transform = CGAffineTransformIdentity
             self.avatar.center.x = self.originalCenterX!
         }
-        
+        //Timer for Milestone 5 to pop back image
+        let resetTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
+
         
         if sender.state == UIGestureRecognizerState.Began{
             initial = avatar.center
@@ -60,9 +66,9 @@ class CaptionalImageView: UIView {
                     velocity.x *= -1
                 }
                 if(velocity.x > 0){
-                    self.avatar.transform = CGAffineTransformMakeRotation(0.34906585)
+                    self.avatar.transform = CGAffineTransformMakeRotation(clockwiseRotation)
                 }else{
-                    self.avatar.transform = CGAffineTransformMakeRotation(-0.349076585)
+                    self.avatar.transform = CGAffineTransformMakeRotation(counterClockwiseRotation)
                 }
             })
         }else{
@@ -74,11 +80,9 @@ class CaptionalImageView: UIView {
             UIView.animateWithDuration(0.75, animations: { () -> Void in
                 if point.x - self.originalCenterX! > 50{ //Alright fam 50 is way too little
                     self.avatar.center.x += self.bounds.width
-                    let resetTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
                     dispatch_after(resetTime, dispatch_get_main_queue(), block)
                 }else if point.x - self.originalCenterX! < -50{
                     self.avatar.center.x -= self.bounds.width
-                    let resetTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
                     dispatch_after(resetTime, dispatch_get_main_queue(), block)
                 }else{
                     //restore original center and transform... handily in our block :)
@@ -89,9 +93,6 @@ class CaptionalImageView: UIView {
     }
     
     func setOriginalCenter(){
-        print("COUNTING")
         originalCenterX = avatar.center.x
-        print(originalCenterX)
-        
     }
 }
